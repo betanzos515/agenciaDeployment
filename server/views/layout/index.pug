@@ -1,0 +1,21 @@
+//creacion de un Layout Principal entonces va a estar en todas las demas paginas
+doctype html
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel='preconnect' href='https://fonts.gstatic.com')
+        link(href='https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Staatliches&display=swap' rel='stylesheet')
+        link(rel="stylesheet", href="/css/bootstrap.css")
+        link(rel="stylesheet", href="/css/style.css")
+        title #{nombreSitio} : #{pagina}
+    body(class=clase)
+       
+        //ya haceremos la separacion del header y el footer para poder incluir los elemen†os usaremos include
+        include header
+        //pug utiliza algo que se le conoce como bloques en el ejemplo de abajo estamos creando el block de paginaInicial este es un alias que tendremos que usar en la pagina de donde queremos sacar el contenido en esta caso inicio.pug
+        block slider
+        block paginaInicial
+
+        include footer
